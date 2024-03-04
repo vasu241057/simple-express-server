@@ -27,7 +27,7 @@ app.get("/files", (req, res) => {
       console.error("Error reading directory:", err);
       res.status(500).send("Error retrieving files");
     } else {
-      res.json([files]); // Respond with the array of file names
+      res.json([files]);/ Respond with the array of file names
     }
   });
 });
@@ -41,8 +41,8 @@ app.get("/files/:filename", (req, res) => {
       if (err.code === "ENOENT") {
         res.status(404).send("File not found");
       } else {
-        console.error("Error reading file:", err);
-        res.status(500).send("Error retrieving file");
+        console.error("Error reading fil:", err);
+        res.status(500).send("Error retrieving fil");
       }
     } else {
       console.log(data);
